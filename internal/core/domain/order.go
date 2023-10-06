@@ -19,7 +19,7 @@ func (order *Order) AddProduct(product Product) {
 	order.Products = append(order.Products, product)
 }
 
-func (order Order) GetTotalPrice() float64 {
+func (order Order) GetTotalOrder() float64 {
 	var total float64
 	for i := 0; i < len(order.Products); i++ {
 		total += order.Products[i].Price
@@ -33,5 +33,5 @@ func (order Order) DetailOrder() {
 	for i := 0; i < len(order.Products); i++ {
 		fmt.Printf("\t Nome: %v, Preço: R$ %v\n", order.Products[i].Name, order.Products[i].Price)
 	}
-	fmt.Printf("\nTotal do Pedido: R$ %v\n\n", order.GetTotalPrice())
+	fmt.Printf("\nTotal do Pedido: R$ %v\n\n", order.GetTotalOrder())
 }

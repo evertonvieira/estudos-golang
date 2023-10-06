@@ -1,8 +1,6 @@
 package main
 
-import (
-	"estudos-go-lang/domain"
-)
+import "github.com/evertonvieira/estudos-golang/internal/core/domain"
 
 func main() {
 	order := new(domain.Order).Init()
